@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hook/useFirebase';
+import { useHistory, useLocation } from 'react-router';
+import useAuth from '../../Hook/useAuth';
+
 import './Login.css'
 
 const Login = () => {
-     const {user,googleSingIn,handleEmail,handlePassword,error,handleLogin} = useFirebase();
+    const [error,setError] = useState('')
+     const {user,googleSingIn,handleEmail,handlePassword,handleLogin} = useAuth();
    
      console.log(user)
+     const location = useLocation()
+     const history = useHistory()
+     const redirect_url = location.state?.from || '/home'
+
+
+     const handleGoogleLogin = () =>{
+         googleSingIn()
+         .then((result) => {
+            console.log(result.user)
+           history.push(redirect_url)
+        })
+        .catch((error)=>{
+            setError(error.message)
+        })
+     }
 
      
     return (
@@ -22,11 +40,11 @@ const Login = () => {
                    <br/><h5> </h5>
                   <input type="submit" value="Submit" />
                  </form>
-
+                 <p className="text-danger">{error}</p>
                  <p>Are you new user <Link to="/register"> Create new Account</Link></p>
          
             <div>---------- <span className="fw-bold">Or</span>  -----------</div>
-            <button type="button" class="btn btn-primary btn-lg" onClick={googleSingIn}>Google SingIN</button>
+            <button type="button" class="btn btn-primary btn-lg" onClick={handleGoogleLogin}>Google SingIN</button>
             </div>
 
         </div>

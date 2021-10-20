@@ -12,10 +12,13 @@ import NotFound from './Component/NotFound/NotFound';
 import Footer from './Component/Footer/Footer';
 import Contact from './Component/Contact/Contact';
 import ServiceDetail from './Component/Service-details/ServiceDetail';
+import AuthProvider from './Context/AuthProvider';
+import PrivateRouter from './Component/PrivateRouter.js/PrivateRouter';
 
 function App() {
   return (
     <div className=" ">
+      <AuthProvider>
       <BrowserRouter>
           <Header></Header>
         <Switch>
@@ -31,9 +34,9 @@ function App() {
           <Route path="/service">
              <Service></Service>
           </Route>
-          <Route path="/contact">
+          <PrivateRouter path="/contact">
             <Contact></Contact>
-          </Route>
+          </PrivateRouter>
           
           <Route path="/register">
             <Register></Register>
@@ -41,9 +44,9 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/servicDetails/:serviceId">
+          <PrivateRouter path="/servicDetails/:serviceId">
                <ServiceDetail></ServiceDetail>
-          </Route>
+          </PrivateRouter>
           
           <Route path="*">
              <NotFound></NotFound>
@@ -51,6 +54,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

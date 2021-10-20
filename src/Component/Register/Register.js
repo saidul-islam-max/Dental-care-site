@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hook/useFirebase';
+import useAuth from '../../Hook/useAuth';
+import { useHistory, useLocation } from 'react-router';
+
 
 const Register = () => {
-    const {handleRegister,handleEmail,handlePassword,googleSingIn,error} = useFirebase()
+
+    const [error,setError] = useState('')
+    const {handleRegister,handleEmail,handlePassword,googleSingIn,} = useAuth()
+    
+    const location = useLocation()
+    const history = useHistory()
+    const redirect_url = location.state?.from || '/home'
+
+
+    const handleGoogleLogin = () =>{
+        googleSingIn()
+        .then((result) => {
+           console.log(result.user)
+          history.push(redirect_url)
+       })
+       .catch((error)=>{
+           setError(error.message)
+       })
+    }
+    
+    
     return (
         <div className="d-flex justify-content-center py-5">
 
@@ -47,7 +69,7 @@ const Register = () => {
      
              <div>---------- <span className="fw-bold">Or</span>  -----------</div>
               
-              <button onClick={googleSingIn }>Sing up Google</button>
+              <button onClick={handleGoogleLogin }>Sing up Google</button>
         </div>
     </div>
     );

@@ -39,14 +39,15 @@ const Home = () => {
                <div className="row ">
                    <div className="col-md-4 col-lg-4 col-12 home-team p-4 text-white">
                       <h3>{team} Our Clinec</h3>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente mollitia repellendus nemo voluptas, eos a Lorem ipsum dolor sit amet.</span>
+                      <span>Our beliefs and values dictate our professional culture, and thus our professional behaviour.
+We Believe That our professionalism and dental services will enrich people's lives & health</span>
                       <br/><br/>
                       <Link to="/about"><button type="button" class="btn btn-outline-light btn-sm">Visit</button></Link>
                    </div>
 
                    <div className="col-md-4 col-lg-4 col-12 home-service p-4 text-white">
                       <h3>{serviceLogo} Our Service</h3>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente mollitia repellendus nemo voluptas, eos a Lorem ipsum dolor sit amet.</span>
+                      <span>Comprehensive dental care simplifies maintaining a healthy mouth, which will lead to a healthier body in general.  We can treat your teeth and gums without having to refer you to countless specialists.</span>
                       <br/><br/>
                       <Link to="/service"><button type="button" class="btn btn-outline-light btn-sm">Visit</button></Link>
                    </div>
@@ -54,7 +55,7 @@ const Home = () => {
 
                    <div className="col-md-4 col-lg-4 col-12 home-team p-4 text-white">
                       <h3>{appoinDate} New Patient</h3>
-                      <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente mollitia repellendus nemo voluptas, eos a Lorem ipsum dolor sit amet.</span>
+                      <span>Are you looking for information on comprehensive dental care? This dental term is used to describe an all-inclusive way to take care of someone’s oral health. <br/> </span>
                       <br/><br/>
                       <Link to="/contact"><button type="button" class="btn btn-outline-light btn-sm">Visit</button></Link>
                    </div>
