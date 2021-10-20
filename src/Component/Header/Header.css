@@ -1,0 +1,20 @@
+.header-link a{
+    color:black;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 15px ;
+    padding: 60px 0px;
+}
+.header{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+.nav-ul-li li:hover {
+   background-color: rgba(0, 0, 0, 0.719);
+   
+} 
+.nav-ul-li li a:hover {
+    color:white;
+}

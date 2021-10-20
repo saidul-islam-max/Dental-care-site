@@ -1,0 +1,26 @@
+.footer-text {
+    position: relative; 
+  }  
+
+ .footer-text:after {
+     position: absolute;
+     content: '';
+     height: 4px;
+     bottom: -10px; 
+     
+     left: 0;
+     right: 0;
+     width: 30%;
+     background: white;
+     transition:.5s;
+ }
+   .footer-text:hover:after {
+       width: 60%;
+       background: black;
+ }
+ .footer-p:hover{
+    color: cyan;
+    margin-left: 5px;
+    font-size: 18px;
+    position: relative;
+ }

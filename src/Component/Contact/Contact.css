@@ -1,0 +1,22 @@
+.contact-text{
+  
+    position: relative; 
+  }  
+
+ .contact-text:after {
+     position: absolute;
+     content: '';
+     height: 4px;
+     bottom: -10px; 
+     margin: 0 auto;
+     left: 0;
+     right: 0;
+     width: 10%;
+     background: black;
+     transition:.5s;
+ }
+   .contact-text:hover:after {
+       width: 30%;
+       background: black;
+ }
+ 
