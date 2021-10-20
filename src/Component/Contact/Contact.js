@@ -8,28 +8,28 @@ const Contact = () => {
                
                     <div className="col-md-8 col-12 my-5">
                         <h2 className="text-center contact-text">Contact Form</h2>
-                    <div class="row">
-                        <div class="col-6 ">
+                    <div className="row">
+                        <div className="col-6 ">
                             <span>First name:</span>
-                            <input type="text" class="form-control" placeholder="First name" aria-label="First name"/>
+                            <input type="text" className="form-control" placeholder="First name" aria-label="First name"/>
                         </div>
-                        <div class="col-6">
+                        <div className="col-6">
                         <span>Last name:</span>
-                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"/>
+                            <input type="text" className="form-control" placeholder="Last name" aria-label="Last name"/>
                         </div>
 
-                        <div class="my-3">
+                        <div className="my-3">
                             <span>Your Email:</span>
-                            <input type="email" class="form-control" placeholder="Enter Your Email"/>
+                            <input type="email" className="form-control" placeholder="Enter Your Email"/>
                         </div>
-                        <div class="">
+                        <div className="">
                         <span>Phone Number:</span>
-                            <input type="number" class="form-control" placeholder="Enter Your number" />
+                            <input type="number" className="form-control" placeholder="Enter Your number" />
                         </div>
 
-                        <div class="form-floating my-3">
+                        <div className="form-floating my-3">
                             <span>Enter your problem</span>
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" height="200px"></textarea>
+                            <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea2" height="200px"></textarea>
                             <label for="floatingTextarea2">Please</label>
                         </div>
 

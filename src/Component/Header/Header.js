@@ -5,11 +5,8 @@ import './Header.css'
 import img from './logo .png'
 
 const Header = () => {
-    const {user,logOut} = useAuth
-    
-    
-    ()
-    console.log(user)
+    const {user,logOut} = useAuth()
+   
     return (
         <div>
         <div className="header">
@@ -18,8 +15,8 @@ const Header = () => {
                 <Link className="navbar-brand" to="/home">
                  <img src={img} width="150" height="60" alt="" />
                 </Link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 ml-5 mb-lg-0 nav-ul-li">

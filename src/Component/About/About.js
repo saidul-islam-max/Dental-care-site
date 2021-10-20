@@ -1,11 +1,10 @@
 import React from 'react';
 
-import Choice from '../Choice/Choice';
-import Contact from '../Contact/Contact';
+
 import './About.css'
 import  about1   from './about1.jpg'
 import  about2   from './about2.jpg'
-import  about3   from './about3.jpg'
+
 
 
 

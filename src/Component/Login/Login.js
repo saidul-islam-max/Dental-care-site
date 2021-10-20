@@ -6,10 +6,10 @@ import useAuth from '../../Hook/useAuth';
 import './Login.css'
 
 const Login = () => {
-    const [error,setError] = useState('')
-     const {user,googleSingIn,handleEmail,handlePassword,handleLogin} = useAuth();
-   
-     console.log(user)
+    
+     const {googleSingIn,handleEmail,handlePassword,handleLogin,error,handleResetPassword} = useAuth();
+     const [errors,setErrors] = useState('')
+     
      const location = useLocation()
      const history = useHistory()
      const redirect_url = location.state?.from || '/home'
@@ -18,11 +18,11 @@ const Login = () => {
      const handleGoogleLogin = () =>{
          googleSingIn()
          .then((result) => {
-            console.log(result.user)
+         
            history.push(redirect_url)
         })
         .catch((error)=>{
-            setError(error.message)
+            setErrors(error.message)
         })
      }
 
@@ -39,12 +39,14 @@ const Login = () => {
                      <input type="password" onBlur={handlePassword} name="" id="" className="p-2" placeholder="Enter your password" />
                    <br/><h5> </h5>
                   <input type="submit" value="Submit" />
-                 </form>
+                 </form><br/><br/>
+                 <button onClick={handleResetPassword}>Reset password</button>
+                 <p className="text-danger">{errors}</p>
                  <p className="text-danger">{error}</p>
                  <p>Are you new user <Link to="/register"> Create new Account</Link></p>
          
             <div>---------- <span className="fw-bold">Or</span>  -----------</div>
-            <button type="button" class="btn btn-primary btn-lg" onClick={handleGoogleLogin}>Google SingIN</button>
+            <button type="button" className="btn btn-primary btn-lg" onClick={handleGoogleLogin}>Google SingIN</button>
             </div>
 
         </div>

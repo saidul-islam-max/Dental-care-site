@@ -1,6 +1,6 @@
 import React from 'react';
 import './Choice.css'
-import { faStethoscope,faAmbulance,faCalendarCheck,faHospital,faServer} from '@fortawesome/free-solid-svg-icons'
+import { faStethoscope,faAmbulance,faHospital,faServer} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const team =  <FontAwesomeIcon icon={faStethoscope} /> ;
 const serviceLogo =  <FontAwesomeIcon icon={faAmbulance} /> ;

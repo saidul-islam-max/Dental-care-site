@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css'
 
-import { faStethoscope,faAmbulance,faCalendarCheck,faPhone,faVoicemail,faLocationArrow} from '@fortawesome/free-solid-svg-icons'
+import { faPhone,faVoicemail,faLocationArrow} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const location =  <FontAwesomeIcon icon={faLocationArrow} /> ;
 const phone =  <FontAwesomeIcon icon={faPhone} /> ;
@@ -20,7 +20,7 @@ const Footer = () => {
                     <input type="email" name="" id="" placeholder="Enter your email" /><br/> 
                     <input type="number" name="" id="" className="my-2" placeholder="enter your phone" />
                     <br/>
-                    <button type="button" class="btn btn-info">Submit</button>
+                    <button type="button" className="btn btn-info">Submit</button>
                   </div>
 
                   <div className="col-md-3 col-6 text-light">
@@ -46,22 +46,22 @@ const Footer = () => {
                   <div className="col-md-3 col-6 text-light">
                   <div className="row">
 
-                        <div className="col-md-12 col-12 d-flex ">
+                        <div className="col-md-12 col-sm-12 d-flex ">
                             <h1 className="fx-4 p-2 border">{location}</h1>
                             <div className="ps-2">
                                 <h6 className="fw-bold">ADDRESS:</h6>
                                 <p className="text">Address Mohipal S.S.K. Road,,Old Dhaka-Chittagong Hwy, </p>
                             </div>
                         </div>
-                        <div className="col-md-12 col-12 d-flex ">
-                            <h1 className="fx-4 p-2 border">{phone}</h1>
+                        <div className="col-md-12 col-sm-12 d-flex ">
+                            <h1 className="fx-4 p-2 border" height="20px">{phone}</h1>
                             <div className="ps-2">
                                 <h6 className="fw-bold">Contact Number</h6>
                                 <p className="text">01700504635</p>
                                 <p className="text">0176464***3</p>
                             </div>
                         </div>
-                        <div className="col-md-12 col-12 d-flex ">
+                        <div className="col-md-12 col-sm-12 d-flex ">
                             <h1 className="fx-4 p-2 border">{email}</h1>
                             <div className="ps-2">
                                 <h6 className="fw-bold">Contact Email</h6>
